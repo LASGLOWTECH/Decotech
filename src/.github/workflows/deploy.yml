@@ -44,4 +44,4 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
       run: |
-        lftp -d -c "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R --verbose --only-newer --parallel=10 ./build public_html; bye;"
+        lftp -d -c "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R --verbose --only-newer --parallel=10 ./build decot-technology.com/public_html; bye;"
